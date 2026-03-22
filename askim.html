@@ -31,28 +31,31 @@ body {<br>
 .container {<br>
 &nbsp;&nbsp;&nbsp; position: relative;<br>
 &nbsp;&nbsp;&nbsp; z-index: 2;<br>
-&nbsp;&nbsp;&nbsp; padding-top: 40px;<br>
+&nbsp;&nbsp;&nbsp; padding-top: 60px;<br>
 }<br>
 <br>
 h1 {<br>
 &nbsp;&nbsp;&nbsp; font-size: 38px;<br>
 }<br>
 <br>
-img {<br>
-&nbsp;&nbsp;&nbsp; width: 280px;<br>
-&nbsp;&nbsp;&nbsp; border-radius: 20px;<br>
-&nbsp;&nbsp;&nbsp; margin-top: 20px;<br>
-&nbsp;&nbsp;&nbsp; box-shadow: 0 0 20px rgba(0,0,0,0.3);<br>
+.big-heart {<br>
+&nbsp;&nbsp;&nbsp; font-size: 100px;<br>
+&nbsp;&nbsp;&nbsp; animation: beat 1s infinite;<br>
+}<br>
+<br>
+@keyframes beat {<br>
+&nbsp;&nbsp;&nbsp; 0%,100% { transform: scale(1); }<br>
+&nbsp;&nbsp;&nbsp; 50% { transform: scale(1.2); }<br>
 }<br>
 <br>
 .text {<br>
 &nbsp;&nbsp;&nbsp; margin-top: 20px;<br>
-&nbsp;&nbsp;&nbsp; font-size: 20px;<br>
+&nbsp;&nbsp;&nbsp; font-size: 22px;<br>
 &nbsp;&nbsp;&nbsp; min-height: 60px;<br>
 }<br>
 <br>
 button {<br>
-&nbsp;&nbsp;&nbsp; margin-top: 20px;<br>
+&nbsp;&nbsp;&nbsp; margin-top: 25px;<br>
 &nbsp;&nbsp;&nbsp; padding: 12px 25px;<br>
 &nbsp;&nbsp;&nbsp; border: none;<br>
 &nbsp;&nbsp;&nbsp; border-radius: 20px;<br>
@@ -66,7 +69,7 @@ button {<br>
 .heart {<br>
 &nbsp;&nbsp;&nbsp; position: absolute;<br>
 &nbsp;&nbsp;&nbsp; top: -10px;<br>
-&nbsp;&nbsp;&nbsp; color: pink;<br>
+&nbsp;&nbsp;&nbsp; font-size: 20px;<br>
 &nbsp;&nbsp;&nbsp; animation: fall linear infinite;<br>
 }<br>
 <br>
@@ -83,7 +86,7 @@ button {<br>
 &lt;div class="container"&gt;<br>
 &nbsp;&nbsp;&nbsp; &lt;h1&gt;&#128150; Seni &#199;ok Seviyorum Han&#305;ma&#287;am &#128150;&lt;/h1&gt;<br>
 <br>
-&nbsp;&nbsp;&nbsp; &lt;img src="askim.jpg"&gt;<br>
+&nbsp;&nbsp;&nbsp; &lt;div class="big-heart"&gt;&#128152;&lt;/div&gt;<br>
 <br>
 &nbsp;&nbsp;&nbsp; &lt;div class="text" id="yazi"&gt;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sen benim en g&#252;zel hikayemsin... &#127800;<br>
@@ -92,15 +95,10 @@ button {<br>
 &nbsp;&nbsp;&nbsp; &lt;button onclick="degistir()"&gt;Mesaj&#305; De&#287;i&#351;tir &#128140;&lt;/button&gt;<br>
 &lt;/div&gt;<br>
 <br>
-&lt;!-- M&#252;zik --&gt;<br>
-&lt;audio autoplay loop&gt;<br>
-&nbsp;&nbsp;&nbsp; &lt;source src="muzik.mp3" type="audio/mpeg"&gt;<br>
-&lt;/audio&gt;<br>
-<br>
 &lt;script&gt;<br>
 let mesajlar = [<br>
-"Seninle her &#351;ey daha anlaml&#305; &#128149;",<br>
-"G&#252;l&#252;&#351;&#252;n d&#252;nyam&#305; ayd&#305;nlat&#305;yor &#10024;",<br>
+"Seninle her &#351;ey daha g&#252;zel &#128149;",<br>
+"G&#252;l&#252;&#351;&#252;n kalbimi eritiyor &#10024;",<br>
 "&#304;yi ki vars&#305;n han&#305;ma&#287;am &#10084;&#65039;",<br>
 "Seni her ge&#231;en g&#252;n daha &#231;ok seviyorum &#128152;",<br>
 "Hayat&#305;m&#305;n en g&#252;zel par&#231;as&#305;s&#305;n &#129782;"<br>
