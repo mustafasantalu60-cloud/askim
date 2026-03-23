@@ -1,0 +1,84 @@
+<p>&lt;!DOCTYPE html&gt;<br>&lt;html lang="tr"&gt;<br>&lt;head&gt;<br>&lt;meta charset="UTF-8"&gt;<br>&lt;title&gt;Hanımağam 💖&lt;/title&gt;</p>
+<p>&lt;style&gt;<br>body 
+{
+<br>&nbsp; &nbsp;margin: 0;<br>&nbsp; &nbsp;overflow: hidden;<br>&nbsp; &nbsp;font-family: Arial, sans-serif;<br>&nbsp; &nbsp;background: linear-gradient(135deg, #ff9a9e, #fecfef);<br>&nbsp; &nbsp;display: flex;<br>&nbsp; &nbsp;justify-content: center;<br>&nbsp; &nbsp;align-items: center;<br>&nbsp; &nbsp;height: 100vh;<br>&nbsp; &nbsp;text-align: center;<br>&nbsp; &nbsp;color: white;<br>
+}
+</p>
+<p>.container 
+{
+<br>&nbsp; &nbsp;max-width: 400px;<br>
+}
+</p>
+<p>h1 
+{
+<br>&nbsp; &nbsp;font-size: 34px;<br>
+}
+</p>
+<p>.heart-big 
+{
+<br>&nbsp; &nbsp;font-size: 90px;<br>&nbsp; &nbsp;animation: beat 1s infinite;<br>
+}
+</p>
+<p>@keyframes beat 
+{
+<br>&nbsp; &nbsp;0%,100% 
+{
+ transform: scale(1); 
+}
+<br>&nbsp; &nbsp;50% 
+{
+ transform: scale(1.2); 
+}
+<br>
+}
+</p>
+<p>.text 
+{
+<br>&nbsp; &nbsp;margin-top: 20px;<br>&nbsp; &nbsp;font-size: 20px;<br>&nbsp; &nbsp;min-height: 60px;<br>
+}
+</p>
+<p>button 
+{
+<br>&nbsp; &nbsp;margin-top: 25px;<br>&nbsp; &nbsp;padding: 12px 25px;<br>&nbsp; &nbsp;border: none;<br>&nbsp; &nbsp;border-radius: 20px;<br>&nbsp; &nbsp;background: #ff4d6d;<br>&nbsp; &nbsp;color: white;<br>&nbsp; &nbsp;font-size: 18px;<br>&nbsp; &nbsp;cursor: pointer;<br>
+}
+</p>
+<p>/* Kalp yağmuru */<br>.heart 
+{
+<br>&nbsp; &nbsp;position: absolute;<br>&nbsp; &nbsp;top: -10px;<br>&nbsp; &nbsp;font-size: 20px;<br>&nbsp; &nbsp;animation: fall linear infinite;<br>
+}
+</p>
+<p>@keyframes fall 
+{
+<br>&nbsp; &nbsp;to 
+{
+<br>&nbsp; &nbsp; &nbsp; &nbsp;transform: translateY(100vh);<br>&nbsp; &nbsp;
+}
+<br>
+}
+<br>&lt;/style&gt;<br>&lt;/head&gt;</p>
+<p>&lt;body&gt;</p>
+<p>&lt;div class="container"&gt;<br>&nbsp; &nbsp;&lt;h1&gt;💖 Seni Çok Seviyorum Hanımağam 💖&lt;/h1&gt;</p>
+<p>&nbsp; &nbsp;&lt;div class="heart-big"&gt;💘&lt;/div&gt;</p>
+<p>&nbsp; &nbsp;&lt;div class="text" id="yazi"&gt;<br>&nbsp; &nbsp; &nbsp; &nbsp;Sen benim en güzel tesadüfümsün... 🌸<br>&nbsp; &nbsp;&lt;/div&gt;</p>
+<p>&nbsp; &nbsp;&lt;button onclick="degistir()"&gt;Mesajı Değiştir 💌&lt;/button&gt;<br>&lt;/div&gt;</p>
+<p>&lt;script&gt;<br>let mesajlar = [<br>"Seninle her şey daha güzel 💕",<br>"Gülüşün dünyamı aydınlatıyor ✨",<br>"İyi ki varsın hanımağam ❤️",<br>"Seni her geçen gün daha çok seviyorum 💘",<br>"Hayatımın en güzel parçasısın 🫶"<br>];</p>
+<p>let index = 0;</p>
+<p>function degistir() 
+{
+<br>&nbsp; &nbsp;index = (index + 1) % mesajlar.length;<br>&nbsp; &nbsp;document.getElementById("yazi").innerText = mesajlar[index];<br>
+}
+</p>
+<p>// Kalp yağmuru<br>function kalpOlustur() 
+{
+<br>&nbsp; &nbsp;let kalp = document.createElement("div");<br>&nbsp; &nbsp;kalp.classList.add("heart");<br>&nbsp; &nbsp;kalp.innerHTML = "💖";</p>
+<p>&nbsp; &nbsp;kalp.style.left = Math.random() * 100 + "vw";<br>&nbsp; &nbsp;kalp.style.animationDuration = (Math.random() * 3 + 2) + "s";</p>
+<p>&nbsp; &nbsp;document.body.appendChild(kalp);</p>
+<p>&nbsp; &nbsp;setTimeout(() =&gt; 
+{
+<br>&nbsp; &nbsp; &nbsp; &nbsp;kalp.remove();<br>&nbsp; &nbsp;
+}
+, 5000);<br>
+}
+</p>
+<p>setInterval(kalpOlustur, 300);<br>&lt;/script&gt;</p>
+<p>&lt;/body&gt;<br>&lt;/html&gt;</p>
